@@ -32,8 +32,50 @@
         color: white;
         margin:10px 0px;
         flex-grow:6;
-      }
+        left: 0px; 
 
+  position:absolute;
+  top:85% ;
+ margin:0px 0px;
+ flex-grow:7;
+      }
+#ibis{
+  left: 5px; 
+  background: gainsboro;
+
+  height: 100%;
+  width: 900px;
+  
+}
+
+    #message{
+   left: 1%;
+  z-index: 9;  
+      position:absolute;
+      top:40%;
+}
+    #email{
+   left: 1%;
+      bottom:65%;
+  
+  z-index: 9;  
+      position:absolute;
+    }
+        #textarea{
+   left: 1%;
+      top:100%;
+  
+  z-index: 9;  
+      position:absolute;
+      
+}
+    }
+    <div id="ibis">BOTTOM</div>
+     <div id="textarea">TOP</div>
+<div id="email">TOP</div>
+    <div id="message">TOP</div>
+        <div id="textarea">TOP</div>
+    }
     nav{
       color: white;
       background-color:  #1976D2;
@@ -131,13 +173,14 @@
         You can search or browse this site to find any bird in Trinidad and Tobago.<br>
     </main>    
       
-    <aside>
+    <aside id="aside"
+      <id= "#scarlet"><img id="ibis" src="images/scarlet ibis.jpeg"
         <form>
           <h1 id="contactus">Contact Us</h1>
-          
-          Email:<input type="email" id="email">
+          <p
+         id="email">Email:<input type="email" id="email"></p>
           <br id="message">Message:<br>
-          <textarea rows="10" cols="50" name="message"></textarea><br>
+          <textarea id="texarea"rows="10" cols="50" name="message"></textarea><br>
         </form>
     </aside>
          

@@ -62,18 +62,23 @@ eg 2: bird.kingdom==="Animalia"
 //INDEX/Home Page
 function appendBirdMainStyle(bird){
   let div=elem('div') //div element
+  let main=elem('main')
+  let aside=elem('aside')
   let figure=elem('figure') //figure element
   let img=elem('img') //etc.......
   let caption=elem('figcaption')
   let p=elem('p')
-  div.append(figure,p) //put figure element then p element just inside div
+  div.append(aside, main) //put figure element then p element just inside div
+  aside.append(figure)
   figure.append(img,caption) //append works the same here for putting <img> and <figcaption> inside <figure>
   caption.innerText=bird.locName
   img.src=bird.image
+  main.append(p)
   p.innerText=`Species: ${bird.species}, 
   Scientific name: ${bird.sciName}, 
   Genus of ${bird.genus}`
-  document.querySelector('main').appendChild(div) //finally, put <div> inside <main>
+  //document.querySelector('#ftbirdimage').appendChild(figure)
+  document.querySelector('div').appendChild(div) //finally, put <div> inside <main>
 }
 
 //One Bird
