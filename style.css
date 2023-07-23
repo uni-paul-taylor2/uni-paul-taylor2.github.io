@@ -140,7 +140,7 @@ label {
 #email:focus {
   outline: none;
   border-color:yellow; 
-  box-shadow: 0 0 5px lightyellow; 
+  box-shadow: 0 0 5px white; 
 }
 
 #message{
@@ -154,7 +154,7 @@ label {
 #message:focus {
   outline: none;
   border-color:yellow; 
-  box-shadow: 0 0 5px lightyellow; 
+  box-shadow: 0 0 5px white; 
 
 }
   

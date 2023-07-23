@@ -149,6 +149,7 @@ async function ONEBIRD(lib){
   q.forEach(function(value,key){
     bird[key]=value
   })
+  document.title="Trinidad Birds | "+bird.comName;
   //appendBirdMainStyle(bird);
   console.log(bird)
   appendBirdMainStyle(bird)
@@ -162,8 +163,6 @@ async function INDEX(lib){
   for(let i=0;i<9;i++){
     appendBirdMainStyle(notable[i]);
   }
-  //basically without brackets u can only have "one" statement in it, everything else after is after the for loop
-  //with brackets, everything inside the curly braces run
 }
 
 
@@ -180,7 +179,7 @@ const pageScripts={
   __proto__: null
 }
 function intMain(lib){
-  window.lib=lib //didn't wanna do this but gonna fix later
+  window.lib=lib
   let searchbar=document.getElementById('searchbutton')
   let searchbtn=document.getElementById('searchicon')
   searchbtn.addEventListener('click',handleSearch)
