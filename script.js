@@ -81,23 +81,23 @@ function appendBirdMainStyle(bird){
 //then have 2 elements inside that div, such that one takes up the picture sized spot on the left and the other takes up the rest of the space on the right
 function appendBirdOneStyle(bird){
   let birdHeader=document.querySelector('header')
-  birdHeader.innerText=bird.comName; //the "bird name <!--Insert From API-->" would become the bird's common name
+  birdHeader.innerText=bird.comName;
   let data=elem('p'), img=elem('img'), text=elem('p')
-  data.innerText=`Species: ${bird.species}, Scientific name: ${bird.sciName}, Genus of ${bird.genus}`
+  data.innerText=`\n${bird.sciName} Taxonomy:\n\n Kingdom: ${bird.kingdom}\nPhylum: ${bird.phylum}\nClass: ${bird.class}\nOrder: ${bird.order}\nFamily: ${bird.family}\nGenus: ${bird.genus}\nSpecies: ${bird.species}`
+  
   img.src=bird.image
   
   let bold=t=>`<b>${t}</b>`
-  let content=`This bird is commonly known as ${bold(bird.comName)}, but scientifically referred to as ${bold(bird.sciName)}`
-  content+=`<br>It is of the ${bold(bird.genus)} genus, hails from the ${bold(bird.order)} order and is a member of the ${bold(bird.family)} family`
-  content+=`<br>In the image, it was recently spotted at <i>${bird.locName}</i>`
+  let content=`This bird is commonly known as the ${bold(bird.comName)}, but is scientifically referred to as the ${bold(bird.sciName)}.`
+  content+=`<br>It is of the ${bold(bird.genus)} genus, hails from the ${bold(bird.order)} order and is a member of the ${bold(bird.family)} family.`
+  content+=`<br>In the image, it was recently spotted at <i>${bird.locName}</i>.`
   text.innerHTML=content
   
   document.getElementById('onebirdimage').appendChild(img)
   document.querySelector('main').appendChild(text)
-  document.querySelector('footer').appendChild(data)
-  //no idea what to put in the footer which is document.querySelector('footer')
+  document.querySelector('main').appendChild(data)
+  
 }
-//nah it is kinda so wrd
 
 //All Birds
 function appendBirdAllStyle(bird){

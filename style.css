@@ -46,7 +46,7 @@
       text-align: center;
     }
   
-    ul{
+    ul#navbar{
       list-style-type:none;
       text-align:center;
     }
@@ -158,4 +158,19 @@ label {
 
 }
   
+/*Footer*/
+#birdlogo2{
+      height:40px;
+      width:auto;
+    }
+#footer1{
+  text-align:right;
+}
 
+#footer2{
+  text-align:left;
+}
+
+#footer3{
+  text-align:right;
+}
