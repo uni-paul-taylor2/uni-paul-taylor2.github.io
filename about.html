@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
@@ -11,147 +11,162 @@
   <script src="lib.js"></script>
 </head>
 
-  <style>
+<style>
+  footer {
+    color: white;
+    background-color: #1976D2;
+  }
 
-      footer{
-        color: white;
-        background-color:  #1976D2;
-      }
-    
-      main{
-        background-color: #2196F3;
-        color: white;
-        flex-grow:4;
-        text-align:center;
-        font-size:23px;
-        
-      }
-      
-     aside{
-       color:white;
-     }
-      /*#ibis,*/ #contactus { 
-        /*position:absolute; /*bruuuuuuuuuh*/
-        padding: 0px;
-      }
-#ibis{
-  left: 5px; 
-  background: white;
+  main {
+    background-color: #2196F3;
+    color: white;
+    flex-grow: 4;
+    text-align: center;
+    font-size: 23px;
 
-  height: 50%;
-  width: 99%;
-  
-}
-#aside{
-  left: 70px; 
-  background: lightgreen;
-  position:absolute;
-  
+  }
 
- margin:10px 0px;
- flex-grow:6;
-}
-    #message{
-   left: 1%;
-  z-index: 11;  
-      /*position:absolute;*/
-      top:65%;
-}
-    #email{
-      
-   left: 1%;
-      top:60%;
-  
-  z-index: 11;  
-      /*position:absolute;*/
-    }
-        #textarea{
-   left: 1%;
-      top:100%;
-  
-  z-index: 11;  
-      /*position:absolute;*/
-      
-}
-        #mail{
-          color: white;
-   left: 1%;
-      top:55%;
-  
-  z-index: 11;  
-      /*position:absolute;*/
-      color:black;
-}
-   
-    /*{
-    <div id="ibis">BOTTOM</div>
-<div id="aside">MID</div>
-      <div id="message">TOP</div>
-    <div id="mail"><MID</div>
-    <div id="email"><TOP</div>
-       <div id=""
-    }*/
-  
-   
-    /*}
-    }*/
-  
-  </style>
+  aside {
+    color: white;
+  }
 
-  
-  <body class="col">
+  /*#ibis,*/
+  #contactus {
+    /*position:absolute; /*bruuuuuuuuuh*/
+    padding: 0px;
+  }
 
-    <nav>
-        <ul id="navbar">
-          <li id="lihome"><a href="index.html"><button id="homebutton">Home</button></a></li>
-          <li id="liallbirds"><a href="allbirds.html"><button id="allbirdsbutton">All Birds</button></a></li>
-          <li id="liwebname"><img id="birdlogo" src="images/bird logo.png"><font size=6>Trinidadian Birds</font></li>
-          <li id="lisearch"><img id="searchicon" src="images/Search Icon.png"> <input id="searchbutton" type="search" placeholder = "Scientific or Common Name"></li>
-        </ul>
-    </nav>
-    
-    <header>
-        Who Are We?
-    </header>
+  #ibis {
+    left: 5px;
+    background: white;
+
+    height: 50%;
+    width: 99%;
+
+  }
+
+  #aside {
+    left: 70px;
+    background: lightgreen;
+    position: absolute;
+
+
+    margin: 10px 0px;
+    flex-grow: 6;
+  }
+
+  #message {
+    left: 1%;
+    z-index: 11;
+    /*position:absolute;*/
+    top: 65%;
+  }
+
+  #email {
+
+    left: 1%;
+    top: 60%;
+
+    z-index: 11;
+    /*position:absolute;*/
+  }
+
+  #textarea {
+    left: 1%;
+    top: 100%;
+
+    z-index: 11;
+    /*position:absolute;*/
+
+  }
+
+  #mail {
+    color: white;
+    left: 1%;
+    top: 55%;
+
+    z-index: 11;
+    color: black;
+  }
+
+  #scarlet {
+    margin-left:20px;
+    padding-left: 70px;
+    padding-top:30px;
+  }
+
+  button#submitb{
+    background-color:lightgreen;
+    width:75px;
+    height:35px;
+    font-size:15px;
+    cursor: pointer;
+  }
+</style>
+
+
+<body class="col">
+
+  <nav>
+    <ul id="navbar">
+      <li id="lihome"><a href="index.html"><button id="homebutton">Home</button></a></li>
+      <li id="liallbirds"><a href="allbirds.html"><button id="allbirdsbutton">All Birds</button></a></li>
+      <li id="liwebname"><img id="birdlogo" src="images/bird logo.png">
+        <font size=6>Trinidadian Birds</font>
+      </li>
+      <li id="lisearch"><img id="searchicon" src="images/Search Icon.png"> <input id="searchbutton" type="search"
+          placeholder="Scientific or Common Name"></li>
+    </ul>
+  </nav>
+
+  <header>
+    Who Are We?
+  </header>
+
+  <main>
+    We are Bird Believers!<br>
+    We are here to help you find birds.<br>
+    You can search or browse this site to find any bird in Trinidad and Tobago.<br>
+  </main>
+
+  <aside id="abtaside">
+    <div id="scarlet">
+      <h1 id="contactus">Contact Us</h1>
+      <!-- <img id="ibis" src="images/scarlet ibis.jpeg"> -->
+      <div class="overlay-text" style="height:25em">
+        <!-- testing something -->
+        <p id="mail">Email:<br></p> <!-- was "mail" -->
+        <input type="email" id="email"> <!-- was "email" -->
+        <br>
+        <p id="message">Message:<br> <!-- was "message" -->
+          <textarea rows="10" cols="35" name="message"></textarea>
+        </p>
+        <button id="submitb">Submit</button>
           
-    <main>
-        We are Bird Believers!<br>
-        We are here to help you find birds.<br>
-        You can search or browse this site to find any bird in Trinidad and Tobago.<br>
-    </main>    
-      
-    <aside id="abtaside">
-      <div id="scarlet">
-        <h1 id="contactus">Contact Us</h1>
-          <!-- <img id="ibis" src="images/scarlet ibis.jpeg"> -->
-            <div class="overlay-text" style="height:400px"> <!-- testing something -->
-            <p id="mail">Email:<br></p> <!-- was "mail" -->
-            <input type="email" id="email"> <!-- was "email" -->
-            <br>
-            <p id="message">Message:<br> <!-- was "message" -->
-            <textarea rows="10" cols="35" name="message"></textarea></p>
-        </div>
       </div>
-    </aside>
-  
-    <footer>
-      <ul id="footer1">
-        <li id="liaboutus"><a href="about.html">About Us</a></li>
-        <li id="licontactus"><a href="about.html#contactus">Contact Us</a></li>
-        <li id="linorights">No Rights Reserved</li>
-      </ul>
-      
-      <ul id="footer2">
-        <li id="footerwebname"><img id="birdlogo2" src="images/bird logo.png"><font size=5>Trinidadian Birds</font></li>
-        
-      </ul>
+    </div>
+  </aside>
 
-      <ul id="footer3">
-        <li id="copyleft">@Copyleft 2023</li>
-      </ul>
-        
-    </footer>
-  
-  </body>
+  <footer>
+    <ul id="footer1">
+      <li id="liaboutus"><a href="about.html">About Us</a></li>
+      <li id="licontactus"><a href="about.html#contactus">Contact Us</a></li>
+      <li id="linorights">No Rights Reserved</li>
+    </ul>
+
+    <ul id="footer2">
+      <li id="footerwebname"><img id="birdlogo2" src="images/bird logo.png">
+        <font size=5>Trinidadian Birds</font>
+      </li>
+
+    </ul>
+
+    <ul id="footer3">
+      <li id="copyleft">@Copyleft 2023</li>
+    </ul>
+
+  </footer>
+
+</body>
+
 </html>
-

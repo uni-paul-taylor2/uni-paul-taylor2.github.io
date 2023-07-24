@@ -108,6 +108,7 @@ function appendBirdAllStyle(bird){
   let link=elem('a')
   let img=elem('img')
   let name=elem('p')
+  name.style="word-wrap:break-word; max-width:50%";
   link.append(img)
   link.href=urlFromBirdData(bird)
   div.append(link, name)
@@ -136,14 +137,19 @@ async function ALLBIRDS(lib){
   for(i;i<end;i++)
     appendBirdAllStyle(birds[i]);
 
-  //all other sets loaded in 5 second gaps
+  //another set loaded ONLY WHEN user is near the bottom (checks every second)
+  let b1=document.body, b2=document.documentElement, isLoading=false
+  let isNearBottom=_=>b1.clientHeight-Math.max(b1.scrollTop,b2.scrollTop)<outerHeight*1.5;
   let s=setInterval(async function(){
+    if(isLoading||!isNearBottom()) return null;
+    isLoading=true;
     let end=Math.min(i+9,birds.length)
     await lib.loadMoreOn(birds,i,end-1);
     for(i;i<end;i++)
       appendBirdAllStyle(birds[i]);
     if(i>=birds.length-1) clearInterval(s);
-  },5e3)
+    isLoading=false;
+  },1e3)
 }
 
 

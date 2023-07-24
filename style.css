@@ -10,12 +10,14 @@
     }
     
     header{
-      background-color:beige;
-      color:black;
+      background-color:#fff1c7;
+      color:#1c480a;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       text-align:center;
       font-size:50px;
       padding:25px 0px;
-      margin:15px 35px; 
+      margin:15px 35px;
+      
     }
     
     footer{
@@ -203,7 +205,7 @@ label {
   flex-grow:1;
   margin:10px;
   padding:30px;
-  background-color:lightyellow;/*this could change etc, just click the box and it'll automatically change when u choose a colour*/
+  background-color:#ffffff;/*this could change etc, just click the box and it'll automatically change when u choose a colour*/
   justify-content:space-evenly;
 
 #abtaside {
@@ -250,5 +252,7 @@ label {
   }
 }
 
-
+#ftparagraph{
+  font-size:20px;
+}
 
