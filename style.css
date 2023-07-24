@@ -65,7 +65,7 @@
       cursor:pointer;
     }
 
-    #aboutbutton{
+    #allbirdsbutton{
       font-family: Arial, Helvetica, sans-serif;
       font-size:23px;
       padding:10px 20px;
@@ -159,18 +159,96 @@ label {
 }
   
 /*Footer*/
-#birdlogo2{
-      height:40px;
-      width:auto;
-    }
 #footer1{
   text-align:right;
+  margin: 10px 20px;
+  padding: 0px 40px;
+}
+
+#liaboutus,#licontactus, #linorights{
+  font-size:20px;
+  margin: 5px, 10px;
+  padding:0px 15px;
 }
 
 #footer2{
   text-align:left;
 }
 
+#birdlogo2{
+  height:50px;
+  width:auto;
+}
+
+
 #footer3{
   text-align:right;
 }
+
+#copyleft{
+  font-size:17px;
+}
+
+#abtaside{
+   margin: 0;
+  padding: 0;
+  background-image: url("images/scarlet ibis.jpeg");
+  background-size: cover; 
+}
+
+
+#allmain{
+  display:flex;
+  flex-wrap:wrap;
+  flex-grow:1;
+  margin:10px;
+  padding:30px;
+  background-color:lightyellow;/*this could change etc, just click the box and it'll automatically change when u choose a colour*/
+  justify-content:space-evenly;
+
+#abtaside {
+  position: relative; /* Set the position to relative for positioning the overlay text */
+}
+
+#scarlet {
+  position: relative; 
+}
+
+.overlay-text {
+  /*position: absolute;*/
+  height: 300px; /*testing*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8); 
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  
+}
+
+#backToTopButton {
+  display: none;
+  position: fixed;
+  /*bottom: 20px;
+  right: 20px;*/
+  top: 90%;
+  left: 90%;
+  z-index: 1;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: lightgreen;
+  border-color: green;
+  cursor: pointer;
+}
+
+@media screen and (min-height: 500px) {
+  
+  #backToTopButton {
+    display: block;
+  }
+}
+
+
+

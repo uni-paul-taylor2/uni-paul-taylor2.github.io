@@ -61,29 +61,27 @@ eg 2: bird.kingdom==="Animalia"
 
 //INDEX/Home Page
 function appendBirdMainStyle(bird){
-  let div=elem('div') //div element
+  let div=elem('div')
   let main=elem('main')
   let aside=elem('aside')
-  let figure=elem('figure') //figure element
-  let img=elem('img') //etc.......
+  let link=elem('a')
+  let figure=elem('figure')
+  let img=elem('img')
   let caption=elem('figcaption')
   let p=elem('p')
-  div.append(aside, main) //put figure element then p element just inside div
+  div.append(aside, main)
+  link.append(img)
+  link.href=urlFromBirdData(bird)
   aside.append(figure)
-  figure.append(img,caption) //append works the same here for putting <img> and <figcaption> inside <figure>
-  caption.innerText=bird.locName
+  figure.append(link,caption)
+  caption.innerText=`${bird.comName}`
   img.src=bird.image
   main.append(p)
-  p.innerText=`Species: ${bird.species}, 
-  Scientific name: ${bird.sciName}, 
-  Genus of ${bird.genus}`
-  //document.querySelector('#ftbirdimage').appendChild(figure)
-  document.querySelector('div').appendChild(div) //finally, put <div> inside <main>
+  p.innerText=`This bird is commonly known as the ${bird.comName}, but is scientifically referred to as the ${bird.sciName}. \nIt is of the ${bird.genus} genus, hails from the ${bird.order} order and is a member of the ${bird.family} family. \nIn the image, it was recently spotted at ${bird.locName}.`
+  document.querySelector('div').appendChild(div)
 }
 
 //One Bird
-//as much data as possible for user to know, want image left data on right in a list maybe
-//then have 2 elements inside that div, such that one takes up the picture sized spot on the left and the other takes up the rest of the space on the right
 function appendBirdOneStyle(bird){
   let birdHeader=document.querySelector('header')
   birdHeader.innerText=bird.comName;
@@ -106,7 +104,16 @@ function appendBirdOneStyle(bird){
 
 //All Birds
 function appendBirdAllStyle(bird){
-  
+  let div=elem('article')
+  let link=elem('a')
+  let img=elem('img')
+  let name=elem('p')
+  link.append(img)
+  link.href=urlFromBirdData(bird)
+  div.append(link, name)
+  img.src=bird.image
+  name.innerText=`${bird.comName}\n${bird.sciName}\n${bird.locName}`
+  document.querySelector('main').appendChild(div)
 }
 
 //Template Functions End^^^
@@ -127,14 +134,14 @@ async function ALLBIRDS(lib){
   let end=Math.min(i+9,birds.length)
   await lib.loadMoreOn(birds,i,end-1);
   for(i;i<end;i++)
-    appendBirdMainStyle(birds[i]);
+    appendBirdAllStyle(birds[i]);
 
   //all other sets loaded in 5 second gaps
   let s=setInterval(async function(){
     let end=Math.min(i+9,birds.length)
     await lib.loadMoreOn(birds,i,end-1);
     for(i;i<end;i++)
-      appendBirdMainStyle(birds[i]);
+      appendBirdAllStyle(birds[i]);
     if(i>=birds.length-1) clearInterval(s);
   },5e3)
 }
@@ -186,3 +193,19 @@ function intMain(lib){
   let page=location.pathname.substr(1);
   if(pageScripts[page]) pageScripts[page](lib);
 }
+
+function scrollToTop() {
+  // Scroll to the top of the document
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+window.addEventListener('scroll', function() {
+  var button = document.getElementById('backToTopButton');
+  if(!button) return null;
+  // Show the button when the user scrolls down 20px from the top of the document
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    button.style.display = 'block';
+  } else {
+    button.style.display = 'none';
+  }
+});

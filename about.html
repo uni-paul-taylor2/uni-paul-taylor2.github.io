@@ -27,128 +27,74 @@
         
       }
       
-      aside{
-        background-color: #FF4081;
-        color: white;
-        margin:10px 0px;
-        flex-grow:6;
-        left: 0px; 
-
-  position:absolute;
-  top:85% ;
- margin:0px 0px;
- flex-grow:7;
+     aside{
+       color:white;
+     }
+      /*#ibis,*/ #contactus { 
+        /*position:absolute; /*bruuuuuuuuuh*/
+        padding: 0px;
       }
 #ibis{
   left: 5px; 
-  background: gainsboro;
+  background: white;
 
-  height: 100%;
-  width: 900px;
+  height: 50%;
+  width: 99%;
   
 }
+#aside{
+  left: 70px; 
+  background: lightgreen;
+  position:absolute;
+  
 
+ margin:10px 0px;
+ flex-grow:6;
+}
     #message{
    left: 1%;
-  z-index: 9;  
-      position:absolute;
-      top:40%;
+  z-index: 11;  
+      /*position:absolute;*/
+      top:65%;
 }
     #email{
+      
    left: 1%;
-      bottom:65%;
+      top:60%;
   
-  z-index: 9;  
-      position:absolute;
+  z-index: 11;  
+      /*position:absolute;*/
     }
         #textarea{
    left: 1%;
       top:100%;
   
-  z-index: 9;  
-      position:absolute;
+  z-index: 11;  
+      /*position:absolute;*/
       
 }
-    }
+        #mail{
+          color: white;
+   left: 1%;
+      top:55%;
+  
+  z-index: 11;  
+      /*position:absolute;*/
+      color:black;
+}
+   
+    /*{
     <div id="ibis">BOTTOM</div>
-     <div id="textarea">TOP</div>
-<div id="email">TOP</div>
-    <div id="message">TOP</div>
-        <div id="textarea">TOP</div>
-    }
-    nav{
-      color: white;
-      background-color:  #1976D2;
-      padding:0px 0px;
-      text-align: center;
-    }
+<div id="aside">MID</div>
+      <div id="message">TOP</div>
+    <div id="mail"><MID</div>
+    <div id="email"><TOP</div>
+       <div id=""
+    }*/
   
-    ul{
-      list-style-type:none;
-      text-align:center;
-    }
-  
-    li{
-      display: inline-block;
-      text-align:right;
-    }
-  
-    #homebutton{
-      font-family: Arial, Helvetica, sans-serif;
-      font-size:23px;
-      padding:10px 20px;
-      margin:10px 0px;
-      background-color:lightgreen;
-      border-color: green;
-      cursor:pointer;
-    }
-
-    #aboutbutton{
-      font-family: Arial, Helvetica, sans-serif;
-      font-size:23px;
-      padding:10px 20px;
-      margin:10px 0px;
-      background-color:lightgreen;
-      border-color: green;
-      cursor:pointer;
-    }
-    
-    #birdlogo{
-      height:60px;
-      width:auto;
-    }
-  
-    #searchbutton{
-      font-family: Arial, Helvetica, sans-serif;
-      font-size:18px;
-      padding:5px;
-      margin:20px 5px;
-      background-color:white;
-      border-color: green;
-      width:280px;
-    }
-  
-    #searchicon{
-      height:25px;
-      width:auto;
-      margin: 3px 0px 0px 0px;
-      padding:5px 0px 0px 0px;
-    }
-    #lihome{
-      margin:10px 65px 10px 40px;
-      padding: 10px 40px;
-    }
-    
-    #liwebname{
-      
-      margin:10px 20px;
-      padding: 10px 40px;
-    }
-    
-    #lisearch{
-      margin:10px 10px;
-      padding: 10px 40px;
-    }
+   
+    /*}
+    }*/
   
   </style>
 
@@ -156,8 +102,9 @@
   <body class="col">
 
     <nav>
-        <ul>
+        <ul id="navbar">
           <li id="lihome"><a href="index.html"><button id="homebutton">Home</button></a></li>
+          <li id="liallbirds"><a href="allbirds.html"><button id="allbirdsbutton">All Birds</button></a></li>
           <li id="liwebname"><img id="birdlogo" src="images/bird logo.png"><font size=6>Trinidadian Birds</font></li>
           <li id="lisearch"><img id="searchicon" src="images/Search Icon.png"> <input id="searchbutton" type="search" placeholder = "Scientific or Common Name"></li>
         </ul>
@@ -173,24 +120,29 @@
         You can search or browse this site to find any bird in Trinidad and Tobago.<br>
     </main>    
       
-    <aside id="aside"
-      <id= "#scarlet"><img id="ibis" src="images/scarlet ibis.jpeg"
-        <form>
-          <h1 id="contactus">Contact Us</h1>
-          <p
-         id="email">Email:<input type="email" id="email"></p>
-          <br id="message">Message:<br>
-          <textarea id="texarea"rows="10" cols="50" name="message"></textarea><br>
-        </form>
+    <aside id="abtaside">
+      <div id="scarlet">
+        <h1 id="contactus">Contact Us</h1>
+          <!-- <img id="ibis" src="images/scarlet ibis.jpeg"> -->
+            <div class="overlay-text" style="height:400px"> <!-- testing something -->
+            <p id="mail">Email:<br></p> <!-- was "mail" -->
+            <input type="email" id="email"> <!-- was "email" -->
+            <br>
+            <p id="message">Message:<br> <!-- was "message" -->
+            <textarea rows="10" cols="35" name="message"></textarea></p>
+        </div>
+      </div>
     </aside>
-         
+  
     <footer>
       <ul id="footer1">
-        <li>No Rights Reserved</li>
+        <li id="liaboutus"><a href="about.html">About Us</a></li>
+        <li id="licontactus"><a href="about.html#contactus">Contact Us</a></li>
+        <li id="linorights">No Rights Reserved</li>
       </ul>
       
       <ul id="footer2">
-        <li id="footerwebname"><img id="birdlogo2" src="images/bird logo.png"><font size=4>Trinidadian Birds</font></li>
+        <li id="footerwebname"><img id="birdlogo2" src="images/bird logo.png"><font size=5>Trinidadian Birds</font></li>
         
       </ul>
 
@@ -202,3 +154,4 @@
   
   </body>
 </html>
+

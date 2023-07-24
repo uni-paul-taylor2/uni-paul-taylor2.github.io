@@ -10,7 +10,35 @@
   <script src="script.js"></script>
   <script src="lib.js"></script>
 </head>
+<style>
+  #aboutbutton{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:23px;
+    padding:10px 20px;
+    margin:10px 0px;
+    background-color:lightgreen;
+    border-color: green;
+    cursor:pointer;
+  }
+  /*experiment*/
+#backToTopButton {
+  display: none;
+  position: fixed;
+  /*bottom: 20px;
+  right: 20px;*/
+  top: 90%;
+  left: 90%;
+  z-index: 1;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: lightgreen;
+  border-color: green;
+  cursor: pointer;
+}
+</style>
 
+  
 <body class="col">
 
     <nav>
@@ -26,19 +54,21 @@
         All Birds
     </header>
           
-    <main>
+    <main id="allmain">
         
     </main>    
       
-         
+<button id="backToTopButton" onclick="scrollToTop()" style="position:fixed; top:90%; left: 90%">Back to Top</button>
+  
     <footer>
       <ul id="footer1">
-        <li><a href="about.html">Contact Us</a></li>
-        <li>No Rights Reserved</li>
+        <li id="liaboutus"><a href="about.html">About Us</a></li>
+        <li id="licontactus"><a href="about.html#contactus">Contact Us</a></li>
+        <li id="linorights">No Rights Reserved</li>
       </ul>
       
       <ul id="footer2">
-        <li id="footerwebname"><img id="birdlogo2" src="images/bird logo.png"><font size=4>Trinidadian Birds</font></li>
+        <li id="footerwebname"><img id="birdlogo2" src="images/bird logo.png"><font size=5>Trinidadian Birds</font></li>
         
       </ul>
 
