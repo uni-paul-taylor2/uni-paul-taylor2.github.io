@@ -29,7 +29,7 @@
     for(let i=start;i<=stop;i++){
       promises[i]=new Promise(async function(work,fail){
         try{
-          let rebound="https://api-forwarder.paulrytaylor.repl.co/"
+          let rebound="https://http-request-forwarder.onrender.com/" //"https://9475c450-25ba-4d00-8c68-61d21bb9c535-00-39tbgvkrbi116.picard.replit.dev/" //"https://api-forwarder.paulrytaylor.repl.co/"
           let baseUrl="api.flickr.com/services/feeds/photos_public.gne?nojsoncallback=1&format=json&tagmode=all&tags="
           let data=await qfetch(rebound+baseUrl+encodeURI(birds[i].sciName))
           birds[i].image=data.items.random().media.m
